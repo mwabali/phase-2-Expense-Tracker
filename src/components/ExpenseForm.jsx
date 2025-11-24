@@ -6,4 +6,11 @@ function ExpenseForm({ addExpense, editingExpense, updateExpense, setEditingExpe
   const [title, setTitle] = useState('');
   const [amount, setAmount] = useState('');
   const [category, setCategory] = useState('Food');
-  
+
+  useEffect(() => {
+    if (editingExpense) {
+      setTitle(editingExpense.title);
+      setAmount(editingExpense.amount);
+      setCategory(editingExpense.category);
+    }
+  }, [editingExpense]);
