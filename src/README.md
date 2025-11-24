@@ -67,3 +67,32 @@ Start the development server
 npm run dev
 # or
 yarn dev
+
+Open the app in your browser
+
+Open the URL displayed in the terminal (usually http://localhost:5173/).
+
+Available Scripts
+<!-- EDIT HERE: Update if you added more scripts -->
+
+npm run dev – Start development server
+
+npm run build – Build the app for production
+
+npm run preview – Preview the production build
+
+**Project Structure**
+expense-tracker/
+├─ public/           # Static assets
+├─ src/
+│  ├─ components/
+│  │  ├─ ExpenseForm.jsx
+│  │  ├─ ExpenseList.jsx
+│  │  ├─ ExpenseItem.jsx
+│  │  └─ ExpenseFilter.jsx
+│  ├─ App.jsx        # Main app component
+│  ├─ main.jsx       # Entry point
+│  └─ App.css        # Styling
+├─ package.json
+├─ vite.config.js
+└─ README.md
