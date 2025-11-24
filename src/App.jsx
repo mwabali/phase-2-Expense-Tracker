@@ -21,7 +21,7 @@ function App(){
   const total = filteredExpenses.reduce((sum, e) => sum + Number(e.amount), 0);
  const saved = localStorage.getItem('expenses');
     return saved ? JSON.parse(saved) : [];
-}
+
 
   useEffect(() => {
     localStorage.setItem('expenses', JSON.stringify(expenses));
