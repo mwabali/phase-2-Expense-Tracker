@@ -32,22 +32,23 @@ function App() {
   }, [expenses]);
 
   return (
-    <div className="App">
-      <h1>Expense Tracker</h1>
-      <ExpenseForm
-        addExpense={addExpense}
-        editingExpense={editingExpense}
-        updateExpense={updateExpense}
-        setEditingExpense={setEditingExpense}
-      />
-      <ExpenseFilter filter={filter} setFilter={setFilter} />
-      <ExpenseList
-        expenses={filteredExpenses}
-        deleteExpense={deleteExpense}
-        setEditingExpense={setEditingExpense}
-      />
-      <h2>Total: ${total}</h2>
-    </div>
+   <div className="App">
+  <h1>Expense Tracker</h1>
+  <ExpenseForm
+    addExpense={addExpense}
+    editingExpense={editingExpense}
+    updateExpense={updateExpense}
+    setEditingExpense={setEditingExpense}
+  />
+  <ExpenseFilter filter={filter} setFilter={setFilter} />
+  <ExpenseList
+    expenses={filteredExpenses}
+    deleteExpense={deleteExpense}
+    setEditingExpense={setEditingExpense}
+  />
+  <div className="total">Total: ${total}</div>
+</div>
+
   );
 }
 
