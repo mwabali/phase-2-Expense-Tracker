@@ -32,3 +32,20 @@ function ExpenseForm({ addExpense, editingExpense, updateExpense, setEditingExpe
     setAmount('');
     setCategory('Food');
   };
+
+
+  return(
+   <form onSubmit={handleSubmit}>
+      <input placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+      <input placeholder="Amount" type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
+      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Entertainment</option>
+        <option>Other</option>
+      </select>
+      <button type="submit">{editingExpense ? 'Update' : 'Add'} Expense</button>
+    </form> 
+  )
+}
+export default ExpenseForm;
