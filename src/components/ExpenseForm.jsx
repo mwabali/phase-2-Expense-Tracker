@@ -14,3 +14,21 @@ function ExpenseForm({ addExpense, editingExpense, updateExpense, setEditingExpe
       setCategory(editingExpense.category);
     }
   }, [editingExpense]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!title || !amount) return;
+
+    const expenseData = { id: editingExpense ? editingExpense.id : Date.now(), title, amount, category };
+
+    if (editingExpense) {
+      updateExpense(editingExpense.id, expenseData);
+      setEditingExpense(null);
+    } else {
+      addExpense(expenseData);
+    }
+
+    setTitle('');
+    setAmount('');
+    setCategory('Food');
+  };
