@@ -96,3 +96,8 @@ expense-tracker/
 ├─ package.json
 ├─ vite.config.js
 └─ README.md
+
+
+localStorage is used to save all expenses.
+
+Expenses are loaded from localStorage when the app starts and automatically updated whenever a change occurs.
