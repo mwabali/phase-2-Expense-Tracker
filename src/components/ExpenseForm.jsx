@@ -44,7 +44,8 @@ function ExpenseForm({ addExpense, editingExpense, updateExpense, setEditingExpe
         <option>Entertainment</option>
         <option>Other</option>
       </select>
-      <button type="submit">{editingExpense ? 'Update' : 'Add'} Expense</button>
+      <button type="submit">{editingExpense ? 'Update Expense' : 'Add Expense'}</button>
+
     </form> 
   )
 }
