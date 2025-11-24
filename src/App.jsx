@@ -19,6 +19,22 @@ function App(){
 
   const total = filteredExpenses.reduce((sum, e) => sum + Number(e.amount), 0);
   return(
+    <div className="App">
+      <h1>Expense Tracker</h1>
+      <ExpenseForm
+        addExpense={addExpense}
+        editingExpense={editingExpense}
+        updateExpense={updateExpense}
+        setEditingExpense={setEditingExpense}
+      />
+      <ExpenseFilter filter={filter} setFilter={setFilter} />
+      <ExpenseList
+        expenses={filteredExpenses}
+        deleteExpense={deleteExpense}
+        setEditingExpense={setEditingExpense}
+      />
+      <h2>Total: ${total}</h2>
+    </div>
 
   )
 }
